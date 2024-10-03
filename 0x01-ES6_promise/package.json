@@ -4,8 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "node",
     "test": "jest",
-    "dev": "node"
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
