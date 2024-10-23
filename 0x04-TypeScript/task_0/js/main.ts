@@ -38,7 +38,7 @@ const styleSheet = `
     border-collapse: collapse;
   }
   thead {
-    font-weight: bold;
+    font-weight: bold
   }
   td {
     padding: 10px;
@@ -48,40 +48,38 @@ const styleSheet = `
   td:hover {
     background: gainsboro;
   }
-
   td:nth-child(1) {
-    text-align: center;
-  }
+    text-align: center;}
 `;
 
 /**
  * Displays information about students in a table.
  * @param students The list of students to display.
- * @author Bezaleel Olakunori <https://github.com/B3zaleel>
+ * @author Mukhola James <https://github.com/Jamezfn>
  */
 export const displayStudents = (students: Array<Student>): void => {
   const table = document.createElement('table');
   const tableHead = document.createElement('thead');
   const headRow = document.createElement('tr');
   const tableBody = document.createElement('tbody');
-  headRow.insertAdjacentHTML('beforeend', '<td>FirstName</td');
-  headRow.insertAdjacentHTML('beforeend', '<td>Location</td');
-  tableHead.insertAdjacentElement('beforeend', headRow);
+  headRow.insertAdjacentHTML('beforeend', `<td>FirstName</td>`);
+  headRow.insertAdjacentHTML('beforeend', `<td>Location</td>`);
+  tableHead.appendChild(headRow);
 
   for (const student of students) {
     const bodyRow = document.createElement('tr');
     bodyRow.insertAdjacentHTML('beforeend', `<td>${student.firstName}</td>`);
     bodyRow.insertAdjacentHTML('beforeend', `<td>${student.location}</td>`);
-    tableBody.insertAdjacentElement('beforeend', bodyRow);
+    tableBody.appendChild(bodyRow);
   }
 
-  table.insertAdjacentElement('beforeend', tableHead);
-  table.insertAdjacentElement('beforeend', tableBody);
-  document.body.insertAdjacentElement('beforeend', table);
+  table.appendChild(tableHead);
+  table.appendChild(tableBody);
+  document.body.appendChild(table)
 };
 
-displayStudents(studentsList);
-const styleSheetElement = document.createElement('style');
-styleSheetElement.innerHTML = styleSheet;
-document.head.insertAdjacentElement('beforeend', styleSheetElement);
-document.title = 'Task 0';
+  displayStudents(studentsList);
+  const styleSheetElement = document.createElement('style');
+  styleSheetElement.innerHTML = styleSheet;
+  document.head.insertAdjacentElement('beforeend', styleSheetElement);
+  document.title = 'Task 0';
