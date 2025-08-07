@@ -9,6 +9,9 @@ export default class Currency {
 	}
 
 	set code(value) {
+		if (typeof value !== 'string') {
+			throw new TypeError('Currency code must be a string');
+		}
 		this._code = value;
 	}
 
@@ -17,15 +20,13 @@ export default class Currency {
 	}
 
 	set name(value) {
-		this._name = value;
+		if (typeof value !== 'string') {
+			throw new TypeError('Currency name must be a string');
+		}
+		this._name = value
 	}
 
-	/**
-	 * Creates the full string representation of this Currency.
-	 * Combines the name and code in the format "Name (code)".
-	 * @returns {String} The formatted string representing the currency.
-	 */
 	displayFullCurrency() {
-		return `${this.name} (${this.code})`;
+		return `${this._name} (${this._code})`;
 	}
 }
