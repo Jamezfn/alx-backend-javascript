@@ -8,12 +8,10 @@
  * @author Mukhola James <https://github.com/Jamezfn>
  * @returns {Number}
  */
-export default function getStudentIdsSum(students) {
-  if (students instanceof Array) {
-    return students.reduce(
-      (prevStudent, curStudent) => prevStudent.id || prevStudent + curStudent.id,
-      0,
-    );
+
+export default function getStudentIdsSum(arr) {
+  if (Array.isArray(arr)) {
+    return arr.reduce((sum, student) => sum + student.id, 0);
   }
   return 0;
 }

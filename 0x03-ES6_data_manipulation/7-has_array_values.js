@@ -1,10 +1,5 @@
-/**
- * Checks if a set contains each element in an array.
- * @param {Set} set - The collection of unique items.
- * @param {*} array - The array of items.
- * @author Mukhola James <https://github.com/Jamezfn>
- * @returns {Boolean}
- */
 export default function hasValuesFromArray(set, array) {
-  return array.every((value) => set.has(value));
+	if (Array.isArray(array) && set instanceof Set) {
+		return array.every((value) => set.has(value));
+	}
 }

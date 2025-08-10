@@ -1,9 +1,6 @@
-/**
- * Creates a set from an array.
- * @param {Array} array - The source array.
- * @author Mukhola James <https://github.com/Jamezfn>
- * @returns {Set}
- */
-export default function setFromArray(array) {
-  return new Set(array);
+export default function setFromArray(arr) {
+	if (!Array.isArray(arr)) {
+		throw new TypeError('Argument must be an array');
+	}
+	return new Set(arr);
 }

@@ -1,16 +1,12 @@
-/**
- * Changes the quantity of unique grocery items to 100.
- * @param {Map<String, number>} map - A map of the name of a
- * grocery and its quantity.
- * @author Mukhola James <https://github.com/Jamezfn>
- */
 export default function updateUniqueItems(map) {
-  if (!(map instanceof Map)) {
+  if (!map instanceof Map) {
     throw new Error('Cannot process');
   }
-  map.forEach((value, key) => {
+  
+  for (const[key, value] of map) {
     if (value === 1) {
-      map.set(key, 100);
+      map.set(key, 100)
     }
-  });
+  }
+  return map;
 }

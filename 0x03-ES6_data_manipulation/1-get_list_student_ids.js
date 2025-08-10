@@ -8,9 +8,10 @@
  * @author Mukhola james <https://github.com/Jamezfn>
  * @returns
  */
-export default function getListStudentIds(students) {
-  if (students instanceof Array) {
-    return students.map((student) => student.id);
+export default function getListStudentIds(arr) {
+  if (!Array.isArray(arr)) {
+    return [];
   }
-  return [];
+
+  return arr.map((student) => student.id);
 }

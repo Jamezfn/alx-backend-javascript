@@ -9,9 +9,10 @@
  * @author Mukhola James <https://github.com/Jamezfn>
  * @returns
  */
-export default function getStudentsByLocation(students, city) {
-  if (students instanceof Array) {
-    return students.filter((student) => student.location === city);
+
+export default function getStudentsByLocation(arr, city) {
+  if (Array.isArray(arr)){
+    return arr.filter(student => student.location === city);
   }
   return [];
 }
