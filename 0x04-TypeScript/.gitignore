@@ -1,0 +1,60 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# TypeScript build output
+dist/
+build/
+js/
+out/
+*.tsbuildinfo
+
+# Bundlers / bundles
+bundle.js
+*.bundle.js
+/public/bundle*
+
+# Source maps (optional)
+*.map
+
+# Coverage / test output
+coverage/
+.nyc_output/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.iml
+
+# Misc
+.cache/
+*.tgz
+*.zip
+
+# Windows
+desktop.ini
+
+# Optional: local node binary
+node_modules/.bin/
+
+# Ignore local npm debug files left by some tools
+npm-debug.log*
+
